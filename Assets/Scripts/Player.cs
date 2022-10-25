@@ -6,6 +6,11 @@ public class Player : MonoBehaviour
 {
     private Animation thisAnimation;
 
+    private Vector3 direction;
+    public float strength = 5f;
+    public float gravity = -9.8f;
+
+
     void Start()
     {
         thisAnimation = GetComponent<Animation>();
@@ -15,6 +20,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             thisAnimation.Play();
+
+            direction = Vector3.up * strength;
+        }
+
+        direction.y += gravity * Time.deltaTime;
+        transform.position += direction * Time.deltaTime;
+            
     }
 }
