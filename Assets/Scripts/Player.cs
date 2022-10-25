@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.tag == "Score")
         {
-                FindObjectOfType<GameManager>().UpdateScore();          
+            FindObjectOfType<GameManager>().UpdateScore();          
         }
     }
 }
