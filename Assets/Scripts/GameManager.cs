@@ -22,10 +22,11 @@ public class GameManager : MonoBehaviour
             StartGame();
     }
 
-    public void UpdateScore(int value)
+    public void UpdateScore()
     {
-        Score += value;
+        Score ++;
         Txt_Score.text = "SCORE : " + Score;
+        print("1");
     }
 
     private void StartGame()

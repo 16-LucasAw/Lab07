@@ -37,5 +37,9 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<GameManager>().GameOver();
         }
+        else if (other.gameObject.tag == "Score")
+        {
+                FindObjectOfType<GameManager>().UpdateScore();          
+        }
     }
 }
