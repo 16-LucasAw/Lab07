@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
-            
+        
     }
 
     private void OnTriggerEnter(Collider other)
