@@ -30,4 +30,12 @@ public class Player : MonoBehaviour
         transform.position += direction * Time.deltaTime;
             
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Obstacle")
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
+    }
 }
