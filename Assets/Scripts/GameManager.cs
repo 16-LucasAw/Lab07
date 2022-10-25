@@ -42,6 +42,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         Txt_Message.text = "GAMEOVER! \nPRESS ENTER TO RESTART GAME.";
         Txt_Message.color = Color.red;
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameOver");
     }
 }
